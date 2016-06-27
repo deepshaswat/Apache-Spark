@@ -1,0 +1,27 @@
+DataFrames:
+
+>>>row = Row(name="Alice", age=11)
+>>> row
+Row(age=11, name='Alice')
+>>> row['name'], row['age']
+('Alice', 11)
+>>>row.name
+Alice
+
+Two types of operations: Transformations and actions
+
+Working a DataFrames:
+
+Create DataFrame from source: <list>
+Apply transformations to DF: select filter
+Apply actions to a DF: show count
+
+>>> data = [('Alice', 11), ('Bob', 12)]
+>>> df = sqlContext.createDataFrame(data)
+>>> sqlContext.createDataFrame(data, ['name', 'age'])
+
+pandas: Py Data Analysis Library
+
+
+df = sqlContext.read.text("<file name>")
+
